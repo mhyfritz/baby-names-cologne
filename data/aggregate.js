@@ -29,7 +29,8 @@ async function processFile(fileName) {
 }
 
 function massage(data, gender, year) {
-  return Object.values(groupBy(data, "vorname")).map(rec => ({
+  // collapse names across "positions"
+  const collapsed = Object.values(groupBy(data, "vorname")).map(rec => ({
     count: rec
       .map(x => Number.parseInt(x.anzahl, 10))
       .reduce((a, b) => a + b, 0),
@@ -37,4 +38,9 @@ function massage(data, gender, year) {
     name: rec[0].vorname,
     year
   }));
+
+  return Object.entries(groupBy(collapsed, "count"))
+    .sort((a, b) => +b[0] - +a[0])
+    .map(([, recs], i) => recs.map(rec => ({ ...rec, rank: i + 1 })))
+    .reduce((acc, cur) => [...acc, ...cur], []);
 }
