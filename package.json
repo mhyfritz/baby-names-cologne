@@ -21,5 +21,13 @@
     "d3-dsv": "^1.2.0",
     "lodash.groupby": "^4.6.0",
     "mkdirp": "^1.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhyfritz/baby-names-cologne.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhyfritz/baby-names-cologne/issues"
+  },
+  "homepage": "https://github.com/mhyfritz/baby-names-cologne#readme"
 }
