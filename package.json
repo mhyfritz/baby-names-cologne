@@ -1,0 +1,24 @@
+{
+  "name": "baby-names-cologne",
+  "version": "2018.0.0",
+  "description": "Baby names from the city of Cologne",
+  "main": "dist/data.json",
+  "scripts": {
+    "build": "npx np",
+    "prepublishOnly": "mkdirp dist && ./build.js"
+  },
+  "keywords": [
+    "names",
+    "baby-names"
+  ],
+  "author": {
+    "name": "Markus Hsi-Yang Fritz",
+    "email": "markus.h.y.fritz@gmail.com"
+  },
+  "license": "CC-BY-3.0",
+  "devDependencies": {
+    "d3-dsv": "^1.2.0",
+    "lodash.groupby": "^4.6.0",
+    "mkdirp": "^1.0.3"
+  }
+}
