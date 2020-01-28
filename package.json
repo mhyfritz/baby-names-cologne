@@ -4,8 +4,9 @@
   "description": "Baby names from the city of Cologne",
   "main": "dist/data.json",
   "scripts": {
-    "build": "npx np",
-    "prepublishOnly": "mkdirp dist && ./build.js"
+    "build": "mkdirp dist && ./build.js",
+    "publish": "npx np",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "names",
