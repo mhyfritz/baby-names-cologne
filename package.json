@@ -1,7 +1,7 @@
 {
   "name": "baby-names-cologne",
   "version": "2018.0.0",
-  "description": "Baby names from the city of Cologne",
+  "description": "Baby names from the city of Cologne, Germany",
   "main": "dist/data.json",
   "scripts": {
     "build": "mkdirp dist && ./build.js",
